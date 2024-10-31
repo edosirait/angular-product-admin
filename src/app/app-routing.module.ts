@@ -8,7 +8,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
-    canActivate: [authGuard]
+    canActivate: [authGuard],
+    canLoad: [authGuard]
   },
   { path: '**', redirectTo: '/login' }
 ];
