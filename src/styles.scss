@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'styles/variables.scss';
+
+/* Global Styles */
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}

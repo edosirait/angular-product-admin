@@ -1,0 +1,29 @@
+<div class="product-container">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h2>Product List</h2>
+    <div style="display: flex; align-items: center; gap: 28px">
+      <div style="position: relative;">
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        (ngModelChange)="onSearch()"
+        placeholder="Search Product"
+        class="search-input"
+      />
+      <div *ngIf="isSearching" class="spinner"></div>
+    </div>
+      <button mat-raised-button color="primary" (click)="openCreateEditProductForm()">Create New Data</button>
+    </div>
+  </div>
+
+  <app-table-common
+    [columns]="columns"
+    [data]="data"
+    [totalItems]="totalProducts"
+    [pageSize]="pageSize"
+    (page)="onPageChange($event)"
+    (edit)="onEditProduct($event)"
+    (delete)="onDeleteProduct($event)">
+  </app-table-common>
+</div>

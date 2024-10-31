@@ -1,0 +1,24 @@
+<div class="product-form-container" [formGroup]="productForm">
+  <h2 *ngIf="!isEditMode">Create New Product</h2>
+  <h2 *ngIf="isEditMode">Edit Product</h2>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Title*</mat-label>
+    <input matInput placeholder="Enter product title" formControlName="title" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Price*</mat-label>
+    <input matInput placeholder="Enter price" formControlName="price" type="number" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Category*</mat-label>
+    <input matInput placeholder="Enter category" formControlName="category" />
+  </mat-form-field>
+
+  <div class="action-buttons">
+    <button mat-button class="save-button" (click)="onSave()">Save</button>
+    <button mat-button class="cancel-button" (click)="onCancel()">Cancel</button>
+  </div>
+</div>

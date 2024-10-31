@@ -1,0 +1,26 @@
+/* home.component.scss */
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: #1D2250; /* Navy Blue as primary color */
+  background-color: #f3f4f6; /* Light gray background */
+  padding: 20px;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1D2250; /* Navy Blue color */
+  margin-bottom: 10px;
+}
+
+.welcome-message {
+  font-size: 1.2rem;
+  color: #04b0c0; /* Accent color */
+  max-width: 600px;
+}
